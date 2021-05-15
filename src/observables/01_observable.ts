@@ -3,7 +3,7 @@ import { Observable, Observer, Subject } from "rxjs"; //To create observables
 //const obs$ = Observable.create();
 
 const observer: Observer<any> = {
-    next: value => console.log('Next [next]: ', value),
+    next: value => console.log('Next [obs]: ', value),
     error: error => console.warn("Error [obs]: ", error),
     complete: () => console.info("Completed [obs]")
 }
@@ -26,6 +26,8 @@ const obs$ = new Observable<string>(subs => {
 
 
 obs$.subscribe(observer);
+
+
 
 
 

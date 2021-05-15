@@ -29,6 +29,7 @@ const intervalo$ = new Observable(subs => {
 
 const subject$ = new Subject();
 
+
 const subscription = intervalo$.subscribe(subject$);
 
 const sub1 = subject$.subscribe(observer);
